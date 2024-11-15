@@ -29,11 +29,11 @@ Now, the goal was to pump some telemetry data (traces, metrics, and logs) from m
 ### Signing Up with Coralogix and Creating an API Key
 Next up was Coralogix. To actually send telemetry data somewhere, I needed a platform to ingest, analyse, and visualise it. That’s where Coralogix came in. 
 
-* I created a free Coralogix account by visiting [Coralogix](https://coralogix.com/) and signing up with an email and password.
+I created a free Coralogix account by visiting [Coralogix](https://coralogix.com/) and signing up with an email and password.
 
 ![Image of Coralogix landing page](./blog-assets/image-coralogix-landing-page.png)
 
-* Once signed up, I navigated to DataFlow > API Keys 
+once signed up, I navigated to DataFlow > API Keys 
 
 ![Image of Coralogix API Keys Menu Item](./blog-assets/image-coralogix-api-keys-menu-item.png)
 
