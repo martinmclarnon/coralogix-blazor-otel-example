@@ -149,7 +149,7 @@ I can drill into the logs by severity on the main dashboard, pinpointing on the 
 
 ![Image of Coralogix Platform Main Dashboard - with Severity set to Critical](./blog-assets/image-coralogix-platform-main-dashboard-severity-critical.png)
 
-Coralogix allows me to create tailored customisable dashboards to fit my requirements, here I can see gauges giving immediate feedback on the count of logs base on severity, a graph of critical and error only severity logs, a datatable, a vertical and horizontal bar charts 
+Coralogix allows me to create tailored customisable dashboards to fit my requirements, here I can see gauges giving immediate feedback on the count of logs based on severity, a graph of critical and error only severity logs, a datatable, a vertical and horizontal bar charts. 
 
 ![Image of Coralogix Platform Custom Dashboard](./blog-assets/image-coralogix-platform-custom-dashboard.png)
 
