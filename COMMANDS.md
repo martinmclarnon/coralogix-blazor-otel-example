@@ -4,10 +4,12 @@
 ```bash
 $ mkdir coralogix-blazor-otel-example
 $ cd coralogix-blazor-otel-example
+$ mkdir src
+$ cd src
 $ dotnet new sln -n coralogix-blazor-otel-example
 $ dotnet new blazorserver -o DemoBlazor
 $ dotnet sln coralogix-blazor-otel-example.sln add DemoBlazor/DemoBlazor.csproj
-$ dotnet run --project  ./src/DemoBlazor/DemoBlazor.csproj
+$ dotnet run --project DemoBlazor/DemoBlazor.csproj
 ```
 
 ## Add Packages for OTEL Collector to DemoBlazor
