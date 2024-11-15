@@ -11,9 +11,10 @@ $ dotnet run --project  ./src/DemoBlazor/DemoBlazor.csproj
 ```
 
 ## Add Packages for OTEL Collector to DemoBlazor
-### OpenTelemetry SDK for .NET
-### OpenTelemetry Exporter to send telemetry data via OTLP protocol
-### OpenTelemetry support for ASP.NET Core (for Blazor Server)
+* ```OpenTelemetry.Extensions.Hosting```: Provides foundational integration with the .NET hosting environment, enabling centralised configuration for OpenTelemetry.
+* ```OpenTelemetry.Exporter.OpenTelemetryProtocol```: Exports data to an OTLP-compatible backend like Coralogix.
+* ```OpenTelemetry.Instrumentation.AspNetCore```: Captures request lifecycle data in ASP.NET Core applications automatically.
+* ```OpenTelemetry.Instrumentation.Http```: Tracks outgoing HTTP requests to external services, providing visibility into dependencies.
 
 ```bash
 $ cd ./src
