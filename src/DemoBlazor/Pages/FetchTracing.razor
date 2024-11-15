@@ -1,0 +1,37 @@
+@page "/fetch-tracing"
+@using DemoBlazor.Data
+@inject ILogger<FetchTracing> Logger
+@inject WeatherForecastService ForecastService
+
+<h3>Fetch Tracing</h3>
+
+<button class="btn btn-primary" @onclick="GenerateTrace">Generate Trace</button>
+
+<p>@statusMessage</p>
+
+@code {
+    private string statusMessage = "Click the button to generate a trace.";
+
+    private async Task GenerateTrace()
+    {
+        try
+        {
+            Logger.LogInformation("Starting trace generation...");
+
+            // Initial service call trace
+            var forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
+            Logger.LogInformation("Initial service call completed.");
+
+            // Nested service call to simulate complex tracing
+            await Task.Delay(100); // Simulate async work
+            Logger.LogInformation("Nested service call trace created.");
+
+            statusMessage = "Trace generated and sent to Coralogix.";
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "An error occurred while generating tracing data.");
+            statusMessage = "An error occurred during trace generation.";
+        }
+    }
+}

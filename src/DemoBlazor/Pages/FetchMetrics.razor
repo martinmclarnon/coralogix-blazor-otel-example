@@ -1,0 +1,40 @@
+@page "/fetch-metrics"
+@using DemoBlazor.Data
+@inject ILogger<FetchMetrics> Logger
+@inject WeatherForecastService ForecastService
+
+<h3>Fetch Metrics</h3>
+
+<button class="btn btn-primary" @onclick="GenerateMetrics">Generate Metrics</button>
+
+<p>@statusMessage</p>
+
+@code {
+    private string statusMessage = "Click the button to generate metrics.";
+
+    private async Task GenerateMetrics()
+    {
+        try
+        {
+            Logger.LogInformation("Starting metric generation...");
+
+            // Simulate a memory allocation metric
+            var forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
+            Logger.LogInformation("Retrieved {Count} weather forecasts.", forecasts.Length);
+
+            // Simulate a CPU intensive task for metrics demonstration
+            for (int i = 0; i < 10000; i++)
+            {
+                Math.Sqrt(i);
+            }
+
+            Logger.LogInformation("Metrics generation completed successfully.");
+            statusMessage = "Metrics generated and sent to Coralogix.";
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "An error occurred while generating metrics.");
+            statusMessage = "An error occurred during metric generation.";
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@page "/fetch-logging"
+@using DemoBlazor.Data
+@inject ILogger<FetchLogging> Logger
+
+<h3>Fetch Logging</h3>
+
+<button class="btn btn-primary" @onclick="GenerateLogs">Generate Logs</button>
+
+<p>@statusMessage</p>
+
+@code {
+    private string statusMessage = "Click the button to generate logs.";
+
+    private void GenerateLogs()
+    {
+        Logger.LogTrace("Trace log: Verbose tracing log for Coralogix.");
+        Logger.LogDebug("Debug log: Debugging information for development.");
+        Logger.LogInformation("Information log: User generated logging event.");
+        Logger.LogWarning("Warning log: This is a warning event.");
+        Logger.LogError("Error log: An error occurred in the logging demo.");
+        Logger.LogCritical("Critical log: Critical issue logged for urgent attention.");
+
+        statusMessage = "Logs generated and sent to Coralogix.";
+    }
+}
