@@ -19,7 +19,7 @@ The default project came with a basic WeatherForecastService — a nifty mock we
 
 ![Image of the code for the Weather Forecast Service - Weather Forecast Service c sharp file](./blog-assets/image-code-weatherforecastservice.png)
 
-From here, I wanted to enhance this basic setup with some real-world monitoring capabilities. This is where observability comes in: rather than relying on gut feeling (or the infamous "it works on my machine" excuse), observability lets us know exactly what's happening under the hood when things go wrong. And in Agile, where bugs are lurking in every sprint, observability is invaluable because we are able to intergate the internal state of our system.
+From here, I wanted to enhance this basic setup with some real-world monitoring capabilities. This is where observability comes in: rather than relying on gut feeling (or the infamous "it works on my machine" excuse), observability lets us know exactly what's happening under the hood when things go wrong. And in Agile, where bugs are lurking in every sprint, observability is invaluable because I am able to intergate the internal state of our system.
 
 ## Getting Cozy with OTEL and Coralogix
 Now, the goal was to pump some telemetry data (traces, metrics, and logs) from my "DemoBlazor" app to Coralogix using OTEL. With OpenTelemetry being a kind of universal adapter for observability, the integration was actually pretty smooth. I just needed to install a few packages and configure endpoints and API keys in appsettings.json.
@@ -29,13 +29,11 @@ Now, the goal was to pump some telemetry data (traces, metrics, and logs) from m
 ### Signing Up with Coralogix and Creating an API Key
 Next up was Coralogix. To actually send telemetry data somewhere, I needed a platform to ingest, analyse, and visualise it. That’s where Coralogix came in. 
 
-Here’s what I did:
-
-* Coralogix Free Trail Sign Up: I created a free Coralogix account by visiting [Coralogix](https://coralogix.com/) and signing up with an email and password.
+* I created a free Coralogix account by visiting [Coralogix](https://coralogix.com/) and signing up with an email and password.
 
 ![Image of Coralogix landing page](./blog-assets/image-coralogix-landing-page.png)
 
-* Create an API Key: Once signed up, I navigated to DataFlow > API Keys 
+* Once signed up, I navigated to DataFlow > API Keys 
 
 ![Image of Coralogix API Keys Menu Item](./blog-assets/image-coralogix-api-keys-menu-item.png)
 
