@@ -137,4 +137,18 @@ FetchLogging, on the other hand, lets me experiment with logs of all levels: Inf
 
 With all three pages in place, my humble weather app was now generating enough observability telemetry data (traces, metrics, and logs) to make Sherlock Holmes proud.
 
-## Coralogis and the Return-on-Investment: Observe, Orientate, Decide, Act
+## Coralogix and the Return-on-Investment: Observe, Orientate, Decide, Act
+
+
+
+## Observability’s Secret Weapon: Root Cause Analysis
+
+Here’s the beauty of observability: when something goes wrong, I don’t have to rely on guesswork. All that OTEL data flows to Coralogix, where I can trace issues back to their root causes with actual data, not assumptions. 
+
+In an Agile setting, this kind of insight can save hours if not days of back-and-forth troubleshooting. Having traces, metrics and logs at my fingertips means I can spot the exact point of failure, down to the millisecond.
+
+## Taking It Further
+
+For those already running a Blazor app, adding observability could be your next power move. Just bring in OTEL for traces, metrics and logs, set up Coralogix, and add custom metrics for key user actions. Want even more control? Try adding alerting in Coralogix to automatically notify you of anomalies. Trust me, once you get a taste of observability, there’s no going back. Who knew debugging could be this fun?
+
+In the end, I may be new to .NET 9.0 and Blazor but with OTEL and Coralogix on my side, I can tackle any bug that comes my way.
