@@ -139,7 +139,23 @@ With all three pages in place, my humble weather app was now generating enough o
 
 ## Coralogix and the Return-on-Investment: Observe, Orientate, Decide, Act
 
+Coralogix provides Full-Stack Observability for Modern Applications and my .NET 9.0 Blazor Server application is pretty modern.
 
+### Coralogix Logs Dashboard
+
+The coralogix Platform is very simple to use and intuitive, I was able to see my telemetry data straight away in the main dashboard
+
+![Image of Coralogix Platform Main Dashboard](./blog-assets/image-coralogix-platform-main-dashboard.png)
+
+I can drill into the logs by severity on the main dashboard, pinpointing on the graph a spike!
+
+![Image of Coralogix Platform Main Dashboard - with Severity set to Critical](./blog-assets/image-coralogix-platform-main-dashboard-severity-critical.png)
+
+Coralogix allows me to create tailored customisable dashboards to fit my requirements, here I can see gauges giving immediate feedback on the count of logs base on severity, a graph of critical and error only severity logs, a datatable, a vertical and horizontal bar charts 
+
+![Image of Coralogix Platform Custom Dashboard](./blog-assets/image-coralogix-platform-custom-dashboard.png)
+
+There is so much more to dive into on the platform!
 
 ## Observability’s Secret Weapon: Root Cause Analysis
 
