@@ -19,9 +19,9 @@ The default project came with a basic WeatherForecastService — a nifty mock we
 
 ![Image of the code for the Weather Forecast Service - Weather Forecast Service c sharp file](./blog-assets/image-code-weatherforecastservice.png)
 
-From here, I wanted to enhance this basic setup with some real-world monitoring capabilities. This is where observability comes in: rather than relying on gut feeling (or the infamous "it works on my machine" excuse), observability lets us know exactly what's happening under the hood when things go wrong. And in Agile, where bugs are lurking in every sprint, observability is invaluable because I am able to intergate the internal state of our system.
+From here, I wanted to enhance this basic setup with some real-world monitoring capabilities. This is where observability comes in: rather than relying on gut feeling (or the infamous "it works on my machine" excuse), observability lets us know exactly what's happening under the hood when things go wrong. And in Agile, where bugs are lurking in every sprint, observability is invaluable because I am able to interrogate the internal state of our system.
 
-## Getting Cozy with OTEL and Coralogix
+## Getting Cosy with OTEL and Coralogix
 Now, the goal was to pump some telemetry data (traces, metrics, and logs) from my "DemoBlazor" app to Coralogix using OTEL. With OpenTelemetry being a kind of universal adapter for observability, the integration was actually pretty smooth. I just needed to install a few packages and configure endpoints and API keys in appsettings.json.
 
 ![Image of the code for the application configuration - app setting JSON file](./blog-assets/image-code-appsettings.png)
@@ -137,15 +137,15 @@ With all three pages in place, my humble weather app was now generating enough o
 
 ## Coralogix and the Return-on-Investment: Observe, Orientate, Decide, Act
 
-Coralogix provides Full-Stack Observability for Modern Applications and my .NET 9.0 Blazor Server application is pretty modern.
+Coralogix provides full-stack observability for modern applications and my .NET 9.0 Blazor Server application is pretty modern.
 
 ### Coralogix Logs Dashboard
 
-The coralogix Platform is very simple to use and intuitive, I was able to see my telemetry data straight away in the main dashboard
+The Coralogix platform is very simple to use and intuitive, I was able to see my telemetry data straight away in the main dashboard
 
 ![Image of Coralogix Platform Main Dashboard](./blog-assets/image-coralogix-platform-main-dashboard.png)
 
-I can drill into the logs by severity on the main dashboard, pinpointing on the graph a spike!
+I can drill into the logs by severity on the main dashboard, pinpointing a spike on the graph!
 
 ![Image of Coralogix Platform Main Dashboard - with Severity set to Critical](./blog-assets/image-coralogix-platform-main-dashboard-severity-critical.png)
 
@@ -159,7 +159,7 @@ There is so much more to dive into on the platform!
 
 Here’s the beauty of observability: when something goes wrong, I don’t have to rely on guesswork. All that OTEL data flows to Coralogix, where I can trace issues back to their root causes with actual data, not assumptions. 
 
-In an Agile setting, this kind of insight can save hours if not days of back-and-forth troubleshooting. Having traces, metrics and logs at my fingertips means I can spot the exact point of failure, down to the millisecond.
+In an Agile setting, this kind of insight can save hours, if not days of back-and-forth troubleshooting. Having traces, metrics and logs at my fingertips means I can spot the exact point of failure, down to the millisecond.
 
 ## Taking It Further
 
