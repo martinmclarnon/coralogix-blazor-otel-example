@@ -1,4 +1,4 @@
-namespace DemoBlazor.Data;
+namespace demo_app.Data;
 
 public class WeatherForecastService
 {

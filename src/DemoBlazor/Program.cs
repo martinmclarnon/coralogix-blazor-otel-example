@@ -5,15 +5,15 @@ using OpenTelemetry.Logs;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Read Coralogix settings from configuration
-var coralogixSettings = builder.Configuration.GetSection("Coralogix");
-string coralogixEndpoint = coralogixSettings.GetValue<string>("Endpoint");
-string coralogixHeader = coralogixSettings.GetValue<string>("Header");
-
 // Add required services for Blazor and Razor Pages
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+// Read Coralogix settings from configuration
+var coralogixSettings = builder.Configuration.GetSection("Coralogix");
+string coralogixEndpoint = coralogixSettings.GetValue<string>("Endpoint");
+string coralogixHeader = coralogixSettings.GetValue<string>("Header");
 
 // Configure OpenTelemetry for tracing, metrics, and logging
 builder.Services.AddOpenTelemetry()
@@ -50,6 +50,7 @@ builder.Logging.AddOpenTelemetry(options =>
     });
 });
 
+
 var app = builder.Build();
 
 // Configure the request handling pipeline
@@ -63,7 +64,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.MapRazorPages(); // Required to support Razor Pages
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host"); // Fallback for Blazor routing
